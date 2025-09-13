@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Default font for whole website */
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  background-color: #ffffff; /* optional: keeps background clean */
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings use Epunda Slab */
+h1, h2, h3, h4 {
+  font-family: 'Epunda Slab', serif;
+}
+
+/* Utility classes (optional if you want manual control) */
+.font-epunda {
+  font-family: 'Epunda Slab', serif;
+}
+
+.font-franklin {
+  font-family: 'Libre Franklin', sans-serif;
+}
