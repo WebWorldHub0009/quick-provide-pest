@@ -7,29 +7,28 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 
 const testimonials = [
-  { name: "Rohit Malhotra", title: "Homeowner, Delhi", text: "WeSecure Pest Control eliminated our termite problem with precision and care. Truly professional service!" },
-  { name: "Simran Kaur", title: "Restaurant Owner, Chandigarh", text: "Our kitchen had a cockroach issue. Their team was quick, effective, and the results lasted!" },
-  { name: "Aditya Sharma", title: "Doctor, Gurgaon", text: "I had mosquito issues at my clinic. They resolved it completely and the staff was very polite." },
-  { name: "Neha Gupta", title: "Businesswoman, Noida", text: "Highly impressed with their eco-friendly solutions. No chemical smell and safe for kids." },
-  { name: "Karan Mehta", title: "Hotel Owner, Jaipur", text: "Their pest control service was excellent. Guests can now enjoy a hygienic stay." },
-  { name: "Pooja Nair", title: "Teacher, Lucknow", text: "Affordable, professional, and quick! They gave us peace of mind at home." },
-  { name: "Rahul Verma", title: "Shop Owner, Mumbai", text: "We had a rat infestation at our store. Their rodent control was very effective and long-lasting." },
-  { name: "Meera Joshi", title: "Fashion Designer, Ahmedabad", text: "They handled my studio with care, making it pest-free while protecting delicate fabrics." },
-  { name: "Arjun Patel", title: "Student, Bangalore", text: "My PG had a bedbug problem. Their treatment worked perfectly, and I could sleep peacefully again." },
-  { name: "Priya Singh", title: "Café Owner, Hyderabad", text: "Their kitchen-safe pest solutions are a lifesaver for our café. No downtime and zero pests." },
-  { name: "Vikram Chauhan", title: "IT Professional, Pune", text: "Professional and timely. They inspected every corner of my flat and solved a recurring ant issue." },
-  { name: "Anjali Sharma", title: "HR Manager, Kolkata", text: "WeSecure Pest Control now handles all our office pest needs. Reliable, consistent, and highly recommended." },
+  { name: "Amit Khanna", title: "Apartment Owner, Delhi", text: "Quick Provide Pest Control handled our termite issue with amazing precision. Highly professional and reliable service!" },
+  { name: "Ritika Sen", title: "Café Owner, Mumbai", text: "Their eco-friendly cockroach treatment worked wonders in our café. Safe, quick, and zero downtime." },
+  { name: "Dr. Manish Suri", title: "Clinic Owner, Lucknow", text: "Mosquitoes around my clinic were a big issue. Their team resolved it completely. Very satisfied!" },
+  { name: "Shreya Gupta", title: "Interior Designer, Gurgaon", text: "I love how safe their pest control is. No chemical smell, safe for kids and pets — and highly effective." },
+  { name: "Rajiv Bansal", title: "Hotel Manager, Jaipur", text: "Guests at our hotel now enjoy a hygienic stay. Their team was quick, discreet, and professional." },
+  { name: "Neha Sharma", title: "Teacher, Chandigarh", text: "Affordable and effective service. They gave us peace of mind at home. Highly recommended!" },
+  { name: "Sandeep Yadav", title: "Shop Owner, Pune", text: "Rats were troubling our store badly. Their rodent control service worked perfectly and results are long-lasting." },
+  { name: "Meenal Desai", title: "Boutique Owner, Ahmedabad", text: "They handled my boutique with utmost care — pest-free environment without harming fabrics." },
+  { name: "Arjun Reddy", title: "Student, Bangalore", text: "Our PG had a bedbug nightmare. Their treatment worked so well — I finally sleep peacefully again." },
+  { name: "Pooja Verma", title: "Restaurant Owner, Hyderabad", text: "Kitchen-safe pest control that saved us from cockroaches. Excellent team and results." },
+  { name: "Vivek Chawla", title: "IT Professional, Noida", text: "Very thorough inspection and effective ant treatment. Their staff was polite and efficient." },
+  { name: "Ananya Iyer", title: "HR Head, Kolkata", text: "We trust Quick Provide Pest Control for all our office needs. Consistent and dependable service!" },
 ];
-
 
 export default function TestimonialSlider() {
   return (
-    <section className="relative w-full py-10 bg-gradient-to-b from-white via-[#F9FAFB] to-[#F3F4F6] px-4 md:px-10 font-[Raleway] overflow-hidden">
+    <section className="relative w-full py-14 bg-gradient-to-b from-white via-[#F9FAFB] to-[#EEF7F2] px-4 md:px-10 font-[Raleway] overflow-hidden">
       {/* ✨ Background Overlays */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-[#3CB371]/10 via-transparent to-[#003366]/10"></div>
-        <div className="absolute top-10 right-20 w-64 h-64 bg-[#3CB371]/20 blur-3xl rounded-full animate-pulse"></div>
-        <div className="absolute bottom-10 left-20 w-72 h-72 bg-[#003366]/10 blur-2xl rounded-full animate-pulse"></div>
+        <div className="absolute top-10 right-20 w-64 h-64 bg-[#3CB371]/25 blur-3xl rounded-full animate-pulse"></div>
+        <div className="absolute bottom-10 left-20 w-72 h-72 bg-[#003366]/15 blur-2xl rounded-full animate-pulse"></div>
       </div>
 
       {/* Heading */}
@@ -38,8 +37,8 @@ export default function TestimonialSlider() {
           What Our Clients <span className="text-[#3CB371]">Say About Us</span>
         </h2>
         <p className="italic text-[#4A4A4A] mt-4 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-          “Trusted across India for safe, eco-friendly, and reliable pest control services 
-          — keeping your homes and businesses pest-free.”
+          “Trusted across India for safe, eco-friendly, and reliable pest control services —
+          keeping your homes and businesses completely pest-free.”
         </p>
       </div>
 
@@ -59,17 +58,21 @@ export default function TestimonialSlider() {
         {testimonials.map((item, idx) => (
           <SwiperSlide key={idx}>
             <div
-              className="rounded-2xl p-8 h-full bg-white shadow-md border border-gray-200
-              text-[#1C1C1C] hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              className="relative rounded-2xl p-8 h-full bg-white 
+              border border-gray-200 text-[#1C1C1C] shadow-md
+              hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
             >
+              {/* Floating Badge */}
+              <span className="absolute -top-5 left-5 bg-[#3CB371] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                ★ Verified Client
+              </span>
+
               <FaQuoteLeft className="text-3xl mb-4 text-[#3CB371]" />
               <p className="mb-6 italic text-gray-700 leading-relaxed">
                 "{item.text}"
               </p>
               <div>
-                <p className="font-semibold text-lg text-[#003366]">
-                  {item.name}
-                </p>
+                <p className="font-semibold text-lg text-[#003366]">{item.name}</p>
                 <p className="text-sm text-gray-500">{item.title}</p>
               </div>
             </div>

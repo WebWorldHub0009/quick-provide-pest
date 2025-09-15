@@ -23,10 +23,8 @@ const services = [
   { title: "Rats Control", slug: "rats-control" },
   { title: "Flies Control", slug: "flies-control" },
   { title: "Bedbugs Treatment", slug: "bedbugs-treatment" },
-  { title: "Silverfish Control", slug: "silverfish-control" },
-  { title: "Ants Control", slug: "ants-control" },
-  { title: "Lizard Control", slug: "lizard-control" },
-  { title: "Snake Control", slug: "snake-control" },
+ { title: "Herbal & Gel Treatment", slug: "herbal-gel-treatment" },
+  { title: "Water Tank Cleaning", slug: "water-tank-cleaning" },
 ];
 
 export default function Footer() {
@@ -147,10 +145,7 @@ export default function Footer() {
           <h4 className="font-semibold text-3xl font-raleway mb-4 text-green-900">
             Contact Info
           </h4>
-          <address className="not-italic leading-relaxed mb-2">
-            Ground Floor, H NO-56, Anupam building, Shri Aurobindo Marg, Azad
-            Apartments, Kalu Sarai, New Delhi, South Delhi, Delhi, 110017
-          </address>
+         
           <address className="not-italic leading-relaxed mb-4">
             Anupam Plaza Building 56, Shop No. G1 Ground Floor, Opposite Azad
             Apartment, Behind Adarsh Express, Vijay Mandal Enclave, Kalu Sarai,

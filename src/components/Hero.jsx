@@ -23,6 +23,7 @@ import heroImg1 from "../assets/home/h1.jpg";
 import heroImg2 from "../assets/home/h2.jpg";
 import heroImg3 from "../assets/home/h3.jpg";
 import heroImg4 from "../assets/home/h4.jpg";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -136,18 +137,18 @@ export default function Hero() {
 
         {/* ✅ CTA Buttons */}
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="#services"
+          <Link
+            to="/services"
             className="px-6 py-3 bg-[#2ECC71] hover:bg-green-600 rounded-full text-white font-franklin shadow-lg transition"
           >
             Explore Services
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-full text-white font-franklin shadow-lg transition"
           >
             Get Free Quote
-          </a>
+          </Link>
         </div>
       </div>
 

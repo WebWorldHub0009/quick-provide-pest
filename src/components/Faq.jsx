@@ -1,12 +1,7 @@
 // src/components/FAQ.jsx
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  FaBug,
-  FaLeaf,
-  FaShieldAlt,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaBug, FaLeaf, FaShieldAlt, FaPhoneAlt, FaPlus } from "react-icons/fa";
 
 const faqCategories = {
   "Our Services": {
@@ -85,7 +80,7 @@ const faqCategories = {
       {
         question: "Where do you operate?",
         answer:
-          "We Secure Pest Control serves Delhi-NCR and nearby regions with fast response times.",
+          "Quick Provide Pest Control serves Delhi-NCR and nearby regions with fast response times.",
       },
     ],
   },
@@ -101,34 +96,42 @@ const FAQ = () => {
   };
 
   return (
-    <section className="relative w-full py-8 px-4 md:px-10 bg-[#f9f9f9] text-black overflow-hidden font-raleway">
+    <section
+      className="relative w-full py-16 px-4 md:px-10 bg-gradient-to-b from-white via-[#f0fdf4] to-[#e8fdf3] text-black overflow-hidden font-raleway"
+      aria-labelledby="faq-heading"
+    >
       {/* Heading */}
-      <div className="text-center pb-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-3 text-[#3CB371] font-raleway tracking-wide">
+      <div className="text-center pb-12">
+        <h2
+          id="faq-heading"
+          className="text-4xl md:text-5xl font-bold mb-3 text-[#3CB371] tracking-wide"
+        >
           Frequently Asked Questions
         </h2>
         <p className="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
           Clear answers to common questions about{" "}
           <span className="text-[#3CB371] font-semibold">
-            We Secure Pest Control
+            Quick Provide Pest Control
           </span>{" "}
           services.
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row max-w-7xl mx-auto shadow-2xl rounded-2xl overflow-hidden border border-gray-800">
+      <div className="flex flex-col md:flex-row max-w-7xl mx-auto shadow-2xl rounded-3xl overflow-hidden border border-gray-200">
         {/* Left Tabs */}
-        <div className="md:w-1/3 bg-green-50 p-6 border-r border-gray-800 flex flex-col gap-4">
+        <div className="md:w-1/3 bg-green-50 p-6 border-r border-gray-200 flex flex-col gap-4">
           {Object.entries(faqCategories).map(([category, data], idx) => (
             <motion.button
               key={idx}
               onClick={() => handleTabChange(category)}
               whileTap={{ scale: 0.97 }}
-              className={`text-left w-full px-5 py-4 rounded-xl flex items-center gap-3 font-medium text-sm md:text-base transition-all duration-300 ${
+              whileHover={{ scale: 1.03 }}
+              className={`text-left w-full px-5 py-4 rounded-2xl flex items-center gap-3 font-medium text-sm md:text-base transition-all duration-300 ${
                 activeTab === category
                   ? "bg-[#277e4e] text-white shadow-lg"
                   : "bg-[#121212] text-gray-400 hover:text-white hover:bg-[#222222]"
               }`}
+              aria-selected={activeTab === category}
             >
               {data.icon}
               <span>{category}</span>
@@ -137,7 +140,10 @@ const FAQ = () => {
         </div>
 
         {/* Right Questions */}
-        <div className="md:w-2/3 p-6 sm:p-10 bg-[#f9f9f9]">
+        <div
+          id="faq-content"
+          className="md:w-2/3 p-6 sm:p-10 bg-white rounded-r-3xl"
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -147,30 +153,32 @@ const FAQ = () => {
               transition={{ duration: 0.4, ease: "easeInOut" }}
             >
               {faqCategories[activeTab].faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="border-b border-gray-800 py-4"
-                >
+                <div key={index} className="border-b border-gray-300 py-4">
                   <button
-                    className="w-full flex cursor-pointer justify-between items-center text-left font-medium text-base sm:text-lg"
+                    className="w-full flex cursor-pointer justify-between items-center text-left font-medium text-base sm:text-lg hover:bg-[#e6f7ef] transition-colors duration-300 px-3 py-2 rounded-md"
                     onClick={() =>
                       setOpenIndex(index === openIndex ? null : index)
                     }
+                    aria-expanded={openIndex === index}
                   >
                     {faq.question}
-                    <span className="text-gray-800 text-2xl font-bold">
-                      {openIndex === index ? "−" : "+"}
-                    </span>
+                    <motion.span
+                      animate={{ rotate: openIndex === index ? 45 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-[#3CB371] text-xl font-bold"
+                    >
+                      <FaPlus />
+                    </motion.span>
                   </button>
 
                   <AnimatePresence initial={false}>
                     {openIndex === index && (
                       <motion.p
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.3 }}
-                        className="text-gray-700 mt-3 text-sm leading-relaxed overflow-hidden"
+                        className="text-gray-700 mt-3 text-sm leading-relaxed overflow-hidden px-3"
                       >
                         {faq.answer}
                       </motion.p>

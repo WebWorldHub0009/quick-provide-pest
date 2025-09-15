@@ -1,164 +1,127 @@
-// src/components/ServicesSection.jsx
+// src/components/Service.jsx
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper/modules"; 
-import  {Link} from "react-router-dom";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation"; 
+import { Link } from "react-router-dom";
+import { FaShieldAlt } from "react-icons/fa";
 
-import ter from "../assets/home/h4.jpg";
-// import cock from "../assets/service/c.webp";
-// import rat from "../assets/service/rat.webp";
-// import fly from "../assets/service/flies.webp";
-// import bed from "../assets/service/bed.webp";
-// import silver from "../assets/service/silver.webp";
-// import ant from "../assets/service/ant.webp";
-// import liza from "../assets/service/lizard.avif";
-// import snake from "../assets/service/snake.webp";
+import ter from "../assets/service/ter.jpg";
+import cock from "../assets/service/cock.jpeg";
+import bug from "../assets/service/bug.jpeg";
+import rat from "../assets/service/rat.jpg";
+import water from "../assets/service/water.jpeg";
+import herbal from "../assets/service/herbal.jpeg";
+import fly from "../assets/service/fly.jpg";
+
+import bg from "../assets/service/ksbg.jpg"; 
 
 const services = [
   {
     title: "Termite Control",
     slug: "termite-control",
-    image: ter,
-    desc: "Specialized termite treatments to protect your property from structural damage, with long-term prevention strategies.",
+    imgSrc: ter,
+    description: "Protect your property from destructive termites with advanced treatment methods."
   },
   {
     title: "Cockroach Control",
     slug: "cockroach-control",
-    image: ter,
-    desc: "Cockroaches are bad for your business & they spread diseases. Protect your family & brand name.",
+    imgSrc: cock,
+    description: "Eco-friendly cockroach control solutions to ensure a hygienic living space."
   },
   {
     title: "Rats Control",
     slug: "rats-control",
-    image: ter,
-    desc: "Rats & mice can ruin your business and damage your brand identity. Stop them before they wreak havoc.",
+    imgSrc: rat,
+    description: "Eliminate rats and rodents with safe and long-lasting methods for homes and businesses."
   },
   {
     title: "Flies Control",
     slug: "flies-control",
-    image: ter,
-    desc: "Got a lot of flies? They can be hazardous to humans. Stop their spread now.",
+    imgSrc: fly,
+    description: "Effective fly management solutions for a clean and healthy environment."
   },
   {
     title: "Bedbugs Treatment",
     slug: "bedbugs-treatment",
-    image: ter,
-    desc: "Once they are in, they are hard to get rid of. Prevent bedbug infestation effectively.",
+    imgSrc: bug,
+    description: "Professional bed bug treatment for peaceful sleep and a hygienic home."
   },
   {
-    title: "Silverfish Control",
-    slug: "silverfish-control",
-    image: ter,
-    desc: "Silverfish may damage fabrics like cotton, linen & silk. Protect your property from them.",
+    title: "Herbal & Gel Treatment",
+    slug: "herbal-gel-treatment",
+    imgSrc: herbal,
+    description: "Natural and eco-friendly herbal & gel treatments to eliminate pests safely."
   },
   {
-    title: "Ants Control",
-    slug: "ants-control",
-    image: ter,
-    desc: "Ants are bad for your business & brand image. Rid your properties of ants efficiently.",
-  },
-  {
-    title: "Lizard Control",
-    slug: "lizard-control",
-    image: ter,
-    desc: "Providing lizard control services in factories, societies, malls, hospitals, schools, and more.",
-  },
-  {
-    title: "Snake Control",
-    slug: "snake-control",
-    image: ter,
-    desc: "Unique snake repellent system ensures snakes stay away from your surroundings.",
+    title: "Water Tank Cleaning",
+    slug: "water-tank-cleaning",
+    imgSrc: water,
+    description: "Comprehensive water tank cleaning services for safe and clean water."
   },
 ];
 
-export default function ServicesSection() {
+export default function Service() {
   return (
-    <section className="relative bg-[#1C1C1C] py-10 overflow-hidden">
-      <div className="relative max-w-7xl mx-auto px-6">
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
-          <h2 className="font-raleway text-4xl md:text-6xl text-white ">
-            Our <span className="text-[#2ECC71]">Pest Control Services</span>
-          </h2>
-          <p className="mt-6 font-body text-gray-300 leading-relaxed text-base md:text-lg">
-            At <span className="text-[#2ECC71]">WeSecure Pest Control</span>, we
-            provide advanced, safe, and eco-friendly pest management solutions
-            for homes, businesses, and industries.
-          </p>
+    <section
+      className="relative py-10 text-center text-black bg-fixed bg-cover bg-center"
+      style={{ backgroundImage: `url(${bg})` }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
+
+      {/* Content */}
+      <div className="relative z-10 px-4 max-w-6xl mx-auto">
+        <h2 className="text-green-800 uppercase tracking-wider text-sm font-bold">
+          Our <span className="text-green-900">Services</span>
+        </h2>
+        <h3 className="text-2xl sm:text-4xl font-bold text-white mt-3">
+          Trusted <span className="text-green-800">Pest Control Solutions</span> by Quick Provide.
+        </h3>
+        <p className="text-gray-100 max-w-3xl mx-auto mt-5 mb-5">
+          We offer professional pest control services to protect your home and business. Click any service below to view full details.
+        </p>
+
+        {/* Service Cards */}
+        <div className="flex flex-wrap justify-center gap-6">
+          {services.map((service, idx) => (
+            <div
+              key={idx}
+              className="bg-white bg-opacity-95 shadow-md rounded-xl p-5 w-80 flex flex-col items-center hover:shadow-lg transition duration-300"
+            >
+              {service.imgSrc && (
+                <img
+                  src={service.imgSrc}
+                  alt={service.title}
+                  className="w-full h-48 object-cover rounded-lg mb-2"
+                />
+              )}
+
+              <FaShieldAlt className="text-green-800 text-3xl mb-2" />
+
+              <h4 className="text-lg uppercase font-bold text-gray-800 mt-2">
+                {service.title}
+              </h4>
+              <p className="text-sm text-gray-600 mt-1 mb-2 line-clamp-2">
+                {service.description}
+              </p>
+              <Link
+                to={`/services/${service.slug}`}
+                className="px-6 py-2 bg-green-800 text-white rounded-full hover:bg-green-900 transition"
+              >
+                Show More
+              </Link>
+            </div>
+          ))}
         </div>
 
-        {/* Swiper Slider */}
-        <Swiper
-          modules={[Pagination, Autoplay, Navigation]} // ✅ Navigation added
-          spaceBetween={30}
-          slidesPerView={3}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          pagination={{ clickable: true }}
-          navigation={true} // ✅ Enables manual prev/next
-          loop={true}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {services.map((service, index) => (
-            <SwiperSlide key={index}>
-              <Link to={`/services/${service.slug}`}>
-                <div className="relative rounded-2xl overflow-hidden group shadow-xl bg-black/20">
-                  {/* Image */}
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    loading="lazy" // ✅ Lazy load for performance
-                    className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent group-hover:from-black/90 transition-all duration-500"></div>
-
-                  {/* Big Number */}
-                  <div className="absolute top-6 left-6 font-cursive2 text-white text-5xl opacity-20">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-
-                  {/* Text Content */}
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="font-cursive2 text-2xl md:text-3xl text-white drop-shadow-lg">
-                      {service.title}
-                    </h3>
-                    <p className="font-body text-sm text-gray-300 mt-2 opacity-90">
-                      {service.desc}
-                    </p>
-                    <Link to="/contact">
-                    <button className="mt-3 cursor-pointer px-5 py-2 rounded-full bg-[#2ECC71] text-black font-semibold shadow-md hover:bg-green-600 transition">
-                      Book Now
-                    </button>
-                    </Link>
-                  </div>
-                </div>
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <p className="mt-10 text-gray-100">
+          Don’t hesitate, contact us for help and services.{" "}
+          <Link
+            to={"/contact"}
+            className="text-green-400 underline hover:text-green-500 transition"
+          >
+            Book Online
+          </Link>
+        </p>
       </div>
-
-      {/* Animations */}
-      <style>
-        {`
-          @keyframes bubbleFloat {
-            0% { transform: translateY(0) scale(1); opacity: 0.7; }
-            50% { transform: translateY(-20px) scale(1.1); opacity: 1; }
-            100% { transform: translateY(0) scale(1); opacity: 0.7; }
-          }
-          .animate-bubbleGlow {
-            animation: bubbleFloat infinite ease-in-out;
-          }
-        `}
-      </style>
     </section>
   );
 }

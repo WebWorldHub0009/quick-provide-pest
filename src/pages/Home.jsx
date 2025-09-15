@@ -6,6 +6,7 @@ import HowItWorks from '../components/HowItWork'
 import WhatMakesUsSuperior from '../components/WhatMakesSuperior'
 import ServicesSection from '../components/ServiceSection'
 import EstimatedSection from "../components/EstimatedSection"
+import RateChart from '../components/RateChart'
 const Home = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const Home = () => {
     <HowItWorks/>
     <ServicesSection/>
     <WhatMakesUsSuperior/>
+    <RateChart/>
     <EstimatedSection/>
     </>
   )

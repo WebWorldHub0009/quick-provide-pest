@@ -1,0 +1,69 @@
+// src/components/ServiceHero.jsx
+import React from "react";
+import {
+  FaBug,
+  FaShieldAlt,
+  FaLeaf,
+  FaPumpSoap,
+} from "react-icons/fa";
+import bgImage from "../assets/showcase/sbg.jpg";
+
+export default function ServiceHero() {
+  const services = [
+    { icon: <FaBug />, text: "Advanced Pest Elimination" },
+    { icon: <FaShieldAlt />, text: "Long-lasting Protection" },
+    { icon: <FaLeaf />, text: "Eco-friendly Solutions" },
+    { icon: <FaPumpSoap />, text: "Safe & Hygienic Methods" },
+  ];
+
+  return (
+    <section
+      className="relative w-full h-[90vh] text-white font-[poppins] flex items-end"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-green-900/60"></div>
+
+      {/* Content Wrapper */}
+      <div className="relative z-10 w-full p-6 sm:p-10 md:p-16 flex flex-col items-center justify-end">
+        {/* Main Heading */}
+        <div className=" text-center mb-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+            Quick Provide <br /> Premium Pest Control
+          </h1>
+          <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
+            Protecting your home and business with{" "}
+            <span className="text-green-400 font-semibold">
+              safe, effective, and eco-friendly
+            </span>{" "}
+            pest control solutions.
+          </p>
+          <p className="mt-4 text-lg sm:text-xl font-medium text-[#A3E635] italic tracking-wide">
+            “Clean Spaces, Healthy Living.”
+          </p>
+        </div>
+
+        {/* Services Highlights - Bottom Center */}
+        <div className="w-full flex justify-center">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+            {services.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center gap-1 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-xl border border-white/10 hover:bg-white/10 hover:shadow-md hover:shadow-green-400/30 transition transform hover:-translate-y-0.5"
+              >
+                <span className="text-2xl text-green-400">{item.icon}</span>
+                <span className="text-xs sm:text-sm md:text-base font-medium text-center">
+                  {item.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

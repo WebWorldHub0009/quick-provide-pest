@@ -14,7 +14,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-// import logo from "../assets/logowesecure.png"
+import logo from "../assets/doc/mlogo.png"
 
 const navItemsLeft = [
   { name: "Home", path: "/", icon: <FaHome className="inline mr-1" /> },
@@ -71,7 +71,7 @@ const ModernNavbar = () => {
       </div>
 
       {/* 🔹 Main Navbar */}
-      <nav className="w-full px-4 py-4 md:px-12  bg-white shadow-md relative z-50">
+      <nav className="w-full px-4 py-1 md:px-12  bg-white shadow-md relative z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Left Items */}
           <ul className="hidden md:flex gap-6 text-sm font-medium uppercase">
@@ -87,14 +87,14 @@ const ModernNavbar = () => {
 
           {/* Center Brand */}
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-xl md:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#2ECC71] to-[#004C8C]">
-        Quick Provide Pest Control
-      </span>
-  {/* <img
-    src={""} 
+  <img
+    src={logo} 
     alt="WeSecure Pest Control Logo"
     className="h-16 w-auto"
-  /> */}
+  />
+          <span className="text-xl md:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#2ECC71] to-[#004C8C]">
+        QPPCS
+      </span>
 </Link>
 
 
