@@ -18,7 +18,7 @@ export default function ServiceHero() {
 
   return (
     <section
-      className="relative w-full h-[90vh] text-white font-[poppins] flex items-end"
+      className="relative w-full h-[75vh] text-white font-[poppins] flex items-end"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
