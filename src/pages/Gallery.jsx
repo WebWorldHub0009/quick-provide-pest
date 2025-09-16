@@ -84,10 +84,10 @@ const Gallery = () => {
       <section id="gallery-section" className="bg-white px-4 md:px-10 py-8">
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-6">
-          <div className="w-20 h-1 bg-gradient-to-r from-[#3CB371] to-[#FFD700] mx-auto mt-4 rounded-full"></div>
+          <div className="w-20 h-1 bg-red-600 mx-auto mt-4 rounded-full"></div>
           <p className="mt-4 text-gray-600 text-base sm:text-lg">
             Explore how{" "}
-            <span className="font-semibold text-[#3CB371]">
+            <span className="font-semibold text-blue-800">
               Quick Provide Pest Control
             </span>{" "}
             protects your homes and businesses with eco-friendly methods,

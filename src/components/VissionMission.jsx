@@ -33,13 +33,13 @@ export default function VisionMission() {
       <div className="relative max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center z-10">
         {/* Vision */}
         <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl p-10 border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
-          <FaEye className="text-[#3CB371] text-5xl mb-6" />
+          <FaEye className="text-red-600 text-5xl mb-6" />
           <h3 className="text-3xl md:text-4xl font-extrabold text-[#003366] mb-6">
             Our Vision
           </h3>
           <p className="text-gray-700 leading-relaxed text-lg">
             At{" "}
-            <span className="font-semibold text-[#3CB371]">
+            <span className="font-semibold text-red-600">
               Quick Provide Pest Control
             </span>
             , our vision is to become India’s most{" "}

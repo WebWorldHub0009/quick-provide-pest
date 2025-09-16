@@ -62,11 +62,9 @@ export default function Service() {
   return (
     <section className="relative py-10 text-center text-black bg-white">
       <div className="relative z-10 px-4 max-w-6xl mx-auto">
-        
-        <h3 className="text-2xl sm:text-4xl font-bold text-green-800 mt-3">
+        <h3 className="text-2xl sm:text-4xl font-bold text-blue-800 mt-3">
           Trusted Pest Control Solutions by Quick Provide
         </h3>
-      
 
         {/* Swiper Slider */}
         <Swiper
@@ -85,7 +83,7 @@ export default function Service() {
           {services.map((service, idx) => (
             <SwiperSlide key={idx}>
               <div className="bg-white shadow-md rounded-xl p-6 flex flex-col items-center hover:shadow-lg transition duration-300 h-full">
-                <FaShieldAlt className="text-green-800 text-4xl mb-3" />
+                <FaShieldAlt className="text-blue-800 text-4xl mb-3" />
                 <h4 className="text-lg uppercase font-bold text-gray-800 mt-2">
                   {service.title}
                 </h4>
@@ -94,7 +92,7 @@ export default function Service() {
                 </p>
                 <Link
                   to={`/services/${service.slug}`}
-                  className="px-6 py-2 bg-green-800 text-white rounded-full hover:bg-green-900 transition"
+                  className="px-6 py-2 bg-blue-800 text-white rounded-full hover:bg-blue-900 transition"
                 >
                   Show More
                 </Link>
@@ -107,7 +105,7 @@ export default function Service() {
           Don’t hesitate, contact us for help and services.{" "}
           <Link
             to={"/contact"}
-            className="text-green-800 underline hover:text-green-900 transition"
+            className="text-blue-800 underline hover:text-blue-900 transition"
           >
             Book Online
           </Link>

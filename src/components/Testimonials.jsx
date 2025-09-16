@@ -34,7 +34,7 @@ export default function TestimonialSlider() {
       {/* Heading */}
       <div className="relative max-w-6xl mx-auto text-center mb-16 z-10">
         <h2 className="text-3xl md:text-5xl font-extrabold text-[#003366] drop-shadow-sm">
-          What Our Clients <span className="text-[#3CB371]">Say About Us</span>
+          What Our Clients <span className="text-red-600">Say About Us</span>
         </h2>
         <p className="italic text-[#4A4A4A] mt-4 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
           “Trusted across India for safe, eco-friendly, and reliable pest control services —
@@ -63,11 +63,11 @@ export default function TestimonialSlider() {
               hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
             >
               {/* Floating Badge */}
-              <span className="absolute -top-5 left-5 bg-[#3CB371] text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+              <span className="absolute -top-5 left-5 bg-blue-800 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                 ★ Verified Client
               </span>
 
-              <FaQuoteLeft className="text-3xl mb-4 text-[#3CB371]" />
+              <FaQuoteLeft className="text-3xl mb-4 text-blue-800" />
               <p className="mb-6 italic text-gray-700 leading-relaxed">
                 "{item.text}"
               </p>

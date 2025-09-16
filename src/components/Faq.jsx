@@ -5,7 +5,7 @@ import { FaBug, FaLeaf, FaShieldAlt, FaPhoneAlt, FaPlus } from "react-icons/fa";
 
 const faqCategories = {
   "Our Services": {
-    icon: <FaBug className="text-[#3CB371] text-xl" />,
+    icon: <FaBug className="text-red-600 text-xl" />,
     faqs: [
       {
         question: "What types of pests do you control?",
@@ -25,7 +25,7 @@ const faqCategories = {
     ],
   },
   "Process & Safety": {
-    icon: <FaShieldAlt className="text-[#3CB371] text-xl" />,
+    icon: <FaShieldAlt className="text-red-600 text-xl" />,
     faqs: [
       {
         question: "How does your pest control process work?",
@@ -45,7 +45,7 @@ const faqCategories = {
     ],
   },
   "Pricing & Guarantee": {
-    icon: <FaLeaf className="text-[#3CB371] text-xl" />,
+    icon: <FaLeaf className="text-red-600 text-xl" />,
     faqs: [
       {
         question: "How much does pest control cost?",
@@ -65,7 +65,7 @@ const faqCategories = {
     ],
   },
   "Support": {
-    icon: <FaPhoneAlt className="text-[#3CB371] text-xl" />,
+    icon: <FaPhoneAlt className="text-red-600 text-xl" />,
     faqs: [
       {
         question: "How can I book a service?",
@@ -104,13 +104,13 @@ const FAQ = () => {
       <div className="text-center pb-12">
         <h2
           id="faq-heading"
-          className="text-4xl md:text-5xl font-bold mb-3 text-[#3CB371] tracking-wide"
+          className="text-4xl md:text-5xl font-bold mb-3 text-red-600 tracking-wide"
         >
           Frequently Asked Questions
         </h2>
         <p className="text-gray-700 max-w-2xl mx-auto text-sm sm:text-base">
           Clear answers to common questions about{" "}
-          <span className="text-[#3CB371] font-semibold">
+          <span className="text-blue-800 font-semibold">
             Quick Provide Pest Control
           </span>{" "}
           services.
@@ -128,7 +128,7 @@ const FAQ = () => {
               whileHover={{ scale: 1.03 }}
               className={`text-left w-full px-5 py-4 rounded-2xl flex items-center gap-3 font-medium text-sm md:text-base transition-all duration-300 ${
                 activeTab === category
-                  ? "bg-[#277e4e] text-white shadow-lg"
+                  ? "bg-blue-800 text-white shadow-lg"
                   : "bg-[#121212] text-gray-400 hover:text-white hover:bg-[#222222]"
               }`}
               aria-selected={activeTab === category}
@@ -165,7 +165,7 @@ const FAQ = () => {
                     <motion.span
                       animate={{ rotate: openIndex === index ? 45 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-[#3CB371] text-xl font-bold"
+                      className="text-blue-200 text-xl font-bold"
                     >
                       <FaPlus />
                     </motion.span>

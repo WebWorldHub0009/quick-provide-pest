@@ -40,11 +40,11 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative py-10 bg-gradient-to-b from-white via-green-100 to-white">
+    <section className="relative py-10 bg-gradient-to-b from-white via-blue-100 to-white">
       {/* Header */}
       <div className="text-center mb-10 px-6">
         <h2 className="text-4xl md:text-5xl font-bold text-[#1C1C1C]">
-          How <span className="text-green-600">Quick Provide</span> Works
+          How <span className="text-red-600">Quick Provide</span> Works
         </h2>
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
           A professional 4-step process that ensures lasting results and
@@ -60,7 +60,7 @@ export default function HowItWorks() {
             className="flex flex-col items-center text-center p-8 rounded-xl bg-white border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
           >
             {/* Icon */}
-            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-green-600 text-white mb-5">
+            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-blue-800 text-white mb-5">
               {step.icon}
             </div>
 

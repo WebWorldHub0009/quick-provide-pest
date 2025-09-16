@@ -39,22 +39,22 @@ export default function Hero() {
 
   const cards = [
     {
-      icon: <FaBug className="text-3xl text-[#2ECC71]" />,
+      icon: <FaBug className="text-3xl text-red-600" />,
       title: "Termite Control",
       desc: "Advanced anti-termite treatments to safeguard your property.",
     },
     {
-      icon: <FaShieldAlt className="text-3xl text-[#2ECC71]" />,
+      icon: <FaShieldAlt className="text-3xl text-red-600" />,
       title: "Rodent & Cockroach",
       desc: "Long-lasting solutions against rodents and cockroaches.",
     },
     {
-      icon: <FaLeaf className="text-3xl text-[#2ECC71]" />,
+      icon: <FaLeaf className="text-3xl text-red-600" />,
       title: "Mosquito & Bed Bugs",
       desc: "Eco-friendly treatments for mosquitoes and bed bugs.",
     },
     {
-      icon: <FaUserShield className="text-3xl text-[#2ECC71]" />,
+      icon: <FaUserShield className="text-3xl text-red-600" />,
       title: "Certified Experts",
       desc: "Trained professionals ensuring safety and reliability.",
     },
@@ -82,10 +82,10 @@ export default function Hero() {
 
       {/* ✅ Social Media (Desktop) */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 flex-col gap-5 text-white z-50 hidden md:flex">
-        <FaFacebookF className="hover:text-[#2ECC71] transition text-2xl cursor-pointer" />
-        <FaTwitter className="hover:text-[#2ECC71] transition text-2xl cursor-pointer" />
-        <FaInstagram className="hover:text-[#2ECC71] transition text-2xl cursor-pointer" />
-        <FaYoutube className="hover:text-[#2ECC71] transition text-2xl cursor-pointer" />
+        <FaFacebookF className="hover:text-red-600 transition text-2xl cursor-pointer" />
+        <FaTwitter className="hover:text-red-600 transition text-2xl cursor-pointer" />
+        <FaInstagram className="hover:text-red-600 transition text-2xl cursor-pointer" />
+        <FaYoutube className="hover:text-red-600 transition text-2xl cursor-pointer" />
       </div>
 
       {/* ✅ Slider Dots (Desktop) */}
@@ -106,7 +106,7 @@ export default function Hero() {
       {/* ✅ Hero Text */}
       <div className="relative bottom-20 z-20 flex flex-col items-center justify-center text-center text-white h-full px-4">
         {/* Tagline */}
-        <h2 className="font-epunda text-[#2ECC71] text-sm md:text-xl tracking-widest uppercase font-bold drop-shadow-md">
+        <h2 className="font-epunda text-red-600 text-sm md:text-xl tracking-widest uppercase font-bold drop-shadow-md">
           Quick Provide Pest Control
         </h2>
 
@@ -139,7 +139,7 @@ export default function Hero() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
             to="/services"
-            className="px-6 py-3 bg-[#2ECC71] hover:bg-green-600 rounded-full text-white font-franklin shadow-lg transition"
+            className="px-6 py-3 bg-blue-800 hover:bg-green-600 rounded-full text-white font-franklin shadow-lg transition"
           >
             Explore Services
           </Link>
@@ -157,7 +157,7 @@ export default function Hero() {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="bg-white/10 backdrop-blur-md border border-[#2ECC71]/40 hover:border-[#2ECC71] text-white p-6 rounded-2xl w-72 hover:scale-105 hover:shadow-2xl transition"
+            className="bg-white/10 backdrop-blur-md border border-blue-800 hover:border-blue-800 text-white p-6 rounded-2xl w-72 hover:scale-105 hover:shadow-2xl transition"
           >
             <div className="flex items-center gap-3 mb-3">
               {card.icon}

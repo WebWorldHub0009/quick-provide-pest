@@ -1,6 +1,6 @@
 import React from "react";
-import { FaArrowRight, FaFolderOpen, FaShieldAlt, FaLeaf, FaPhoneAlt } from "react-icons/fa";
-import img from "../assets/home/h2.jpg"; 
+import { FaArrowRight, FaLeaf, FaPhoneAlt } from "react-icons/fa";
+import img from "../assets/home/h2.jpg";
 import { Link } from "react-router-dom";
 
 export default function AboutQuickProvide() {
@@ -9,7 +9,7 @@ export default function AboutQuickProvide() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 items-center">
         
         {/* Left Section (Image + Overlay) */}
-        <div className="bg-[#f9f9f9] rounded-2xl overflow-hidden shadow-lg">
+        <div className="bg-[#2E3A87] rounded-2xl overflow-hidden shadow-lg">
           <div className="relative">
             <img
               src={img}
@@ -18,19 +18,19 @@ export default function AboutQuickProvide() {
             />
             {/* SVG overlay */}
             <svg
-              className="absolute top-0 left-0 w-full h-full opacity-70"
+              className="absolute top-0 left-0 w-full h-full opacity-60"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 500 150"
               preserveAspectRatio="none"
             >
               <path
                 d="M-0.84,24.14 C150.00,150.00 349.59,-49.98 500.00,49.99 L500.00,0.00 L0.00,0.00 Z"
-                style={{ stroke: "none", fill: "#e3f7ec" }}
+                style={{ stroke: "none", fill: "#1F2C73" }}
               ></path>
             </svg>
             {/* Arrow button */}
             <Link to="/showcase">
-              <button className="cursor-pointer absolute top-4 right-4 bg-white rounded-full p-3 shadow-md hover:bg-[#2ECC71] hover:text-white transition">
+              <button className="cursor-pointer absolute top-4 right-4 bg-white text-[#E30613] rounded-full p-3 shadow-md hover:bg-[#E30613] hover:text-white transition">
                 <FaArrowRight />
               </button>
             </Link>
@@ -38,10 +38,10 @@ export default function AboutQuickProvide() {
 
           {/* Left Text */}
           <div className="p-4 sm:p-6">
-            <h3 className="text-lg sm:text-xl font-semibold text-[#2ECC71]">
+            <h3 className="text-lg sm:text-xl font-semibold text-[#E30613]">
               Our Expertise
             </h3>
-            <p className="text-gray-600 mt-2 text-sm sm:text-base leading-relaxed">
+            <p className="text-white mt-2 text-sm sm:text-base leading-relaxed">
               Delivering safe, eco-friendly pest control solutions using
               advanced technology and certified experts. We protect homes,
               offices, and industries with premium care.
@@ -49,7 +49,7 @@ export default function AboutQuickProvide() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 border-t border-gray-200 text-center">
+          <div className="grid grid-cols-3 border-t border-[#1F2C73] text-center">
             {[
               { number: "10+", label: "Years Experience" },
               { number: "5K+", label: "Happy Clients" },
@@ -57,12 +57,12 @@ export default function AboutQuickProvide() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="py-4 bg-white hover:bg-[#e3f7ec] transition"
+                className="py-4 bg-[#1F2C73] hover:bg-[#2E3A87] transition"
               >
-                <p className="text-lg sm:text-2xl font-bold text-[#004C8C]">
+                <p className="text-lg sm:text-2xl font-bold text-white">
                   {stat.number}
                 </p>
-                <p className="text-xs sm:text-sm text-gray-600">{stat.label}</p>
+                <p className="text-xs sm:text-sm text-gray-200">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -71,17 +71,17 @@ export default function AboutQuickProvide() {
         {/* Right Section (Content) */}
         <div className="text-center md:text-left">
           {/* Tag */}
-          <span className="inline-block bg-[#e3f7ec] text-[#2ECC71] px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
+          <span className="inline-block bg-[#E30613] text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
             About Us?
           </span>
 
           {/* Heading */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#004C8C] mt-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#000000] mt-3">
             Premium Pest Control Service with Guaranteed Results
           </h2>
 
           {/* Description */}
-          <p className="text-gray-600 mt-4 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-700 mt-4 text-sm sm:text-base leading-relaxed">
             At <strong>Quick Provide Pest Control</strong>, we believe in more
             than just eliminating pests — we deliver long-term protection,
             eco-friendly treatments, and peace of mind. From households to large
@@ -90,30 +90,30 @@ export default function AboutQuickProvide() {
 
           {/* Feature Cards */}
           <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 mt-6">
-            <div className="flex items-start gap-3 p-4 bg-[#f3f2fc] rounded-xl shadow-sm w-full sm:w-1/2">
-              <div className="p-3 bg-white rounded-lg text-[#2ECC71] flex-shrink-0">
+            <div className="flex items-start gap-3 p-4 bg-[#2E3A87] rounded-xl shadow-sm w-full sm:w-1/2">
+              <div className="p-3 bg-white rounded-lg text-[#E30613] flex-shrink-0">
                 <FaLeaf size={22} />
               </div>
               <div>
-                <h4 className="text-base sm:text-lg font-semibold text-[#004C8C]">
+                <h4 className="text-base sm:text-lg font-semibold text-white">
                   Eco-Safe Chemicals
                 </h4>
-                <p className="text-gray-600 text-xs sm:text-sm">
+                <p className="text-gray-200 text-xs sm:text-sm">
                   We use WHO-approved chemicals ensuring safety for your family
                   and pets.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-4 bg-[#f3f2fc] rounded-xl shadow-sm w-full sm:w-1/2">
-              <div className="p-3 bg-white rounded-lg text-[#2ECC71] flex-shrink-0">
+            <div className="flex items-start gap-3 p-4 bg-[#2E3A87] rounded-xl shadow-sm w-full sm:w-1/2">
+              <div className="p-3 bg-white rounded-lg text-[#E30613] flex-shrink-0">
                 <FaPhoneAlt size={22} />
               </div>
               <div>
-                <h4 className="text-base sm:text-lg font-semibold text-[#004C8C]">
+                <h4 className="text-base sm:text-lg font-semibold text-white">
                   24/7 Quick Support
                 </h4>
-                <p className="text-gray-600 text-xs sm:text-sm">
+                <p className="text-gray-200 text-xs sm:text-sm">
                   Our dedicated support team ensures fast response and service
                   anytime you need us.
                 </p>
@@ -122,7 +122,7 @@ export default function AboutQuickProvide() {
           </div>
 
           {/* Mini List */}
-          <ul className="mt-6 space-y-2 text-sm sm:text-base text-gray-700">
+          <ul className="mt-6 space-y-2 text-sm sm:text-base text-gray-800">
             <li>✔️ 100% Eco-Friendly Pest Solutions</li>
             <li>✔️ Affordable & Transparent Pricing</li>
             <li>✔️ Certified Experts with Modern Equipment</li>
@@ -131,12 +131,12 @@ export default function AboutQuickProvide() {
           {/* Buttons */}
           <div className="flex flex-row gap-3 sm:gap-4 mt-10 justify-center md:justify-start">
             <Link to="/about">
-              <button className="cursor-pointer px-6 py-3 bg-[#2ECC71] text-white rounded-full shadow-md hover:bg-[#27ae60] transition text-sm sm:text-base">
+              <button className="cursor-pointer px-6 py-3 bg-[#E30613] text-white rounded-full shadow-md hover:bg-red-700 transition text-sm sm:text-base">
                 Learn More
               </button>
             </Link>
             <Link to="/contact">
-              <button className="cursor-pointer px-6 py-3 bg-[#004C8C] text-white rounded-full shadow-md hover:bg-[#003366] transition text-sm sm:text-base">
+              <button className="cursor-pointer px-6 py-3 bg-[#1F2C73] text-white rounded-full shadow-md hover:bg-[#2E3A87] transition text-sm sm:text-base">
                 Contact Us
               </button>
             </Link>

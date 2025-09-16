@@ -31,15 +31,15 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-[#f0fdf4] to-white py-10 px-6 sm:px-10 lg:px-24 text-[#1C1C1C] font-franklin">
+    <section className="bg-[#2e3a85]/40 py-10 px-6 sm:px-10 lg:px-24 text-white font-franklin">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-14 gap-6">
           <div>
-            <h2 className="text-3xl md:text-4xl font-epunda font-bold text-[#14532d] mb-3">
+            <h2 className="text-3xl md:text-4xl font-epunda font-bold text-[#E30613] mb-3">
               Why Choose Quick Provide Pest Control?
             </h2>
-            <p className="text-base md:text-lg text-gray-700 max-w-xl">
+            <p className="text-base md:text-lg text-gray-200 max-w-xl">
               From eco-friendly methods to certified professionals, Quick Provide
               ensures your home and workplace stay pest-free, safe, and
               comfortable.
@@ -48,7 +48,7 @@ export default function WhyChooseUs() {
 
           <Link
             to="/services"
-            className="bg-[#14532d] text-white px-7 py-3 rounded-full hover:bg-[#c62828] transition shadow-lg "
+            className="bg-[#E30613] text-white px-7 py-3 rounded-full hover:bg-red-700 transition shadow-lg"
           >
             Go To Service
           </Link>
@@ -79,13 +79,13 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Sleek Full-width Badge */}
-        <div className="w-full rounded-xl bg-gradient-to-r from-[#14532d] via-[#1B4332] to-[#3CB371] text-white py-4 px-6 md:px-12 shadow-lg">
+        <div className="w-full rounded-xl bg-gradient-to-r from-[#1F2C73] via-[#2E3A87] to-[#1F2C73] text-white py-4 px-6 md:px-12 shadow-lg">
           <p className="text-center leading-relaxed max-w-5xl mx-auto">
-            At <span className="">Quick Provide Pest Control</span>,
+            At <span className="text-[#E30613] font-semibold">Quick Provide Pest Control</span>,
             we combine advanced technology, certified expertise, and eco-safe
             methods to deliver results that truly last. Our mission is simple:
-            keep your spaces <span className="">pest-free, safe, and
-            comfortable</span>—so you can focus on living, not worrying.
+            keep your spaces <span className="text-[#E30613] font-semibold">pest-free, safe, and
+            comfortable</span> — so you can focus on living, not worrying.
           </p>
         </div>
       </div>
@@ -98,15 +98,15 @@ const Card = ({ reason }) => (
   <div
     className={`rounded-2xl px-6 py-6 flex flex-col justify-between items-center text-center shadow-xl backdrop-blur-lg border transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl ${
       reason.active
-        ? "bg-gradient-to-br from-[#14532d] via-[#1B4332] to-[#3CB371] text-white border-none"
-        : "bg-white/70 border-gray-200 text-[#1C1C1C]"
+        ? "bg-gradient-to-br from-[#E30613] via-[#1F2C73] to-[#2E3A87] text-white border-none"
+        : "bg-white text-[#000000] border border-gray-300"
     } animate-fade-in`}
   >
     <div
       className={`w-16 h-16 flex items-center justify-center rounded-full mb-5 shadow-md transition ${
         reason.active
-          ? "bg-white text-[#14532d]"
-          : "bg-[#14532d]/10 text-[#14532d]"
+          ? "bg-white text-[#E30613]"
+          : "bg-[#2E3A87]/10 text-[#1F2C73]"
       }`}
     >
       {reason.icon}
@@ -123,8 +123,8 @@ const Card = ({ reason }) => (
       to="/services"
       className={`mt-6 px-6 py-2.5 rounded-full font-medium transition shadow ${
         reason.active
-          ? "bg-white text-[#14532d] hover:bg-[#f0fdf4]"
-          : "bg-[#14532d] text-white hover:bg-[#c62828]"
+          ? "bg-white text-[#E30613] hover:bg-gray-100"
+          : "bg-[#1F2C73] text-white hover:bg-[#2E3A87]"
       }`}
     >
       Learn More

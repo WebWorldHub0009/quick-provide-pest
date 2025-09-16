@@ -43,7 +43,7 @@ export default function Footer() {
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-sm">
         {/* About Section */}
         <div className="flex flex-col space-y-4 text-black">
-          <p className="text-2xl md:text-4xl font-raleway font-semibold text-green-900 tracking-wide">
+          <p className="text-2xl md:text-4xl font-raleway font-semibold text-blue-800 tracking-wide">
             Quick Provide Pest Control
           </p>
           <p className="leading-relaxed text-black text-lg mt-2">
@@ -66,7 +66,7 @@ export default function Footer() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-green-800 hover:text-black transition duration-300"
+                className="text-blue-800 hover:text-black transition duration-300"
               >
                 <Icon size={22} />
               </a>
@@ -79,7 +79,7 @@ export default function Footer() {
               href="https://webmail.quickprovidepestcontrolservice.in"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-green-600 text-black px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300"
+              className="inline-flex items-center gap-2 bg-blue-800 text-black px-4 py-2 rounded-lg font-semibold hover:bg-blue-900 transition duration-300"
             >
               <FaEnvelope /> Webmail
             </a>
@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div className="text-black">
-          <h4 className="font-semibold font-raleway text-3xl mb-4 text-green-900">
+          <h4 className="font-semibold font-raleway text-3xl mb-4 text-blue-800">
             Quick Links
           </h4>
           <ul className="space-y-3">
@@ -102,7 +102,7 @@ export default function Footer() {
               <li key={i}>
                 <Link
                   to={link}
-                  className="flex items-center gap-2 text-black hover:text-green-600 transition duration-300"
+                  className="flex items-center gap-2 text-black hover:text-blue-800 transition duration-300"
                 >
                   {icon} {text}
                 </Link>
@@ -110,7 +110,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <h4 className="font-semibold font-raleway text-3xl mt-6 mb-2 text-green-900">
+          <h4 className="font-semibold font-raleway text-3xl mt-6 mb-2 text-blue-800">
             Business Info
           </h4>
           <ul className="space-y-2 text-black">
@@ -122,16 +122,16 @@ export default function Footer() {
 
         {/* Services */}
         <div className="text-black">
-          <h4 className="font-semibold font-raleway text-3xl mb-4 text-green-900">
+          <h4 className="font-semibold font-raleway text-3xl mb-4 text-blue-800">
             Our Services
           </h4>
           <ul className="space-y-3">
             {services.map(({ title, slug }, i) => (
               <li key={i} className="flex items-center gap-2">
-                <FaTruckMoving className="text-green-600" />
+                <FaTruckMoving className="text-blue-800" />
                 <Link
                   to={`/services/${slug}`}
-                  className="text-black hover:text-green-600 transition duration-300"
+                  className="text-black hover:text-blue-800 transition duration-300"
                 >
                   {title}
                 </Link>
@@ -142,7 +142,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="text-black">
-          <h4 className="font-semibold text-3xl font-raleway mb-4 text-green-900">
+          <h4 className="font-semibold text-3xl font-raleway mb-4 text-blue-800">
             Contact Info
           </h4>
          
@@ -155,27 +155,27 @@ export default function Footer() {
           {/* Emails */}
           {[
             "Quickprovidepestcontrolservice@gmail.com",
-            "quickprovidepestcontrol@gmail.com",
+            
            
           ].map((email, i) => (
             <p key={i} className="text-sm mb-2 flex items-center gap-2">
-              <FaEnvelope className="text-green-600" />
+              <FaEnvelope className="text-blue-800" />
               <a
                 href={`mailto:${email}`}
-                className="hover:text-green-600 transition duration-300"
+                className="hover:text-blue-800 transition duration-300"
               >
                 {email}
               </a>
             </p>
           ))}
 
-          {/* Phones */}
-          {["+91 99587 17631", "+91 81782 90067"].map((num, i) => (
+          {/* Phones */}  
+          {["+919958717631", "+91 8178290067"].map((num, i) => (
             <p key={i} className="text-sm mb-2 flex items-center gap-2">
-              <FaPhoneAlt className="text-green-600" />
+              <FaPhoneAlt className="text-blue-800" />
               <a
                 href={`tel:${num.replace(/\s/g, "")}`}
-                className="hover:text-green-600 transition duration-300"
+                className="hover:text-blue-800 transition duration-300"
               >
                 {num}
               </a>
@@ -183,12 +183,15 @@ export default function Footer() {
           ))}
 
           <p className="text-sm mb-2 flex items-center gap-2">
-            <FaPhoneAlt className="text-green-600" /> Owner: Raj Kumar
+            <FaPhoneAlt className="text-blue-800" /> Owner: Raj Kumar
             Choudhary
           </p>
 
           <div className="mb-4 flex justify-start items-center">
+            <div>
+
             <Translator />
+            </div>
           </div>
         </div>
       </div>
@@ -206,7 +209,7 @@ export default function Footer() {
             href="https://webworldhub.co.in"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold hover:text-green-600 transition duration-300"
+            className="font-semibold hover:text-blue-800 transition duration-300"
           >
             Web World Hub
           </a>

@@ -30,7 +30,7 @@ const EstimateSection = () => {
 
         {/* Content */}
         <div className="relative z-10 text-center lg:text-left text-white space-y-4 px-4 lg:px-12 py-6 lg:py-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-green-400 tracking-wide">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-red-600 tracking-wide">
             Quick Provide Pest Control
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-200 max-w-lg mx-auto lg:mx-0">
@@ -43,12 +43,12 @@ const EstimateSection = () => {
       {/* Right Form Side */}
       <div className="w-full lg:w-1/2 flex items-center justify-center py-10 px-6 lg:px-12 bg-white">
         <div className="w-full max-w-xl bg-white/95 backdrop-blur-lg rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-800 mb-6 border-b-2 border-[#3CB371] pb-2">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-800 mb-6 border-b-2 border-[#3CB371] pb-2">
             Request a Quick Estimate
           </h2>
 
           <form
-            action="https://formsubmit.co/quickprovidepestcontrol@gmail.com"
+            action="https://formsubmit.co/Quickprovidepestcontrol@gmail.com"
             method="POST"
             className="grid grid-cols-1 sm:grid-cols-2 gap-5"
           >
@@ -150,7 +150,7 @@ const EstimateSection = () => {
             <div className="sm:col-span-2 text-center">
               <button
                 type="submit"
-                className="w-full sm:w-auto bg-gradient-to-r from-[#3CB371] to-[#1E90FF] text-white font-semibold px-10 py-3 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
+                className="w-full sm:w-auto bg-blue-800 text-white font-semibold px-10 py-3 rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300"
               >
                 Submit Request
               </button>

@@ -69,11 +69,11 @@ export default function Service() {
 
       {/* Content */}
       <div className="relative z-10 px-4 max-w-6xl mx-auto">
-        <h2 className="text-green-800 uppercase tracking-wider text-sm font-bold">
-          Our <span className="text-green-900">Services</span>
+        <h2 className="text-red-600 uppercase tracking-wider text-sm font-bold">
+          Our <span className="text-red-600">Services</span>
         </h2>
         <h3 className="text-2xl sm:text-4xl font-bold text-white mt-3">
-          Trusted <span className="text-green-800">Pest Control Solutions</span> by Quick Provide.
+          Trusted <span className="text-red-500">Pest Control Solutions</span> by Quick Provide.
         </h3>
         <p className="text-gray-100 max-w-3xl mx-auto mt-5 mb-5">
           We offer professional pest control services to protect your home and business. Click any service below to view full details.
@@ -94,7 +94,7 @@ export default function Service() {
                 />
               )}
 
-              <FaShieldAlt className="text-green-800 text-3xl mb-2" />
+              <FaShieldAlt className="text-blue-800 text-3xl mb-2" />
 
               <h4 className="text-lg uppercase font-bold text-gray-800 mt-2">
                 {service.title}
@@ -104,7 +104,7 @@ export default function Service() {
               </p>
               <Link
                 to={`/services/${service.slug}`}
-                className="px-6 py-2 bg-green-800 text-white rounded-full hover:bg-green-900 transition"
+                className="px-6 py-2 bg-blue-800 text-white rounded-full hover:bg-blue-900 transition"
               >
                 Show More
               </Link>
@@ -116,7 +116,7 @@ export default function Service() {
           Don’t hesitate, contact us for help and services.{" "}
           <Link
             to={"/contact"}
-            className="text-green-400 underline hover:text-green-500 transition"
+            className="text-red-600 underline hover:text-red-700 transition"
           >
             Book Online
           </Link>
