@@ -6,7 +6,7 @@ const FloatingButtons = () => {
     <div className="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
       
       <a
-        href="tel:+919773760041"
+        href="tel:+918178290067"
         className="w-12 h-12 flex items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 transition duration-300"
       >
         <FaPhoneAlt size={20} />
