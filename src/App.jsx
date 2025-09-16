@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Certificates from "./pages/Certificates";
 
+import FloatingButtons from "./components/FloatingButtons";
+
+
 // Lazy loaded pages
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -11,6 +14,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Services = lazy(() => import("./pages/Services"));
 const ServiceDetails = lazy(() => import("./pages/ServiceDetails"));
+
 
 const App = () => {
   return (
@@ -36,6 +40,7 @@ const App = () => {
           <Route path="/certificate" element={<Certificates/>} />
         </Routes>
       </Suspense>
+      <FloatingButtons/>
       <Footer />
     </BrowserRouter>
   );

@@ -13,7 +13,7 @@ const FloatingButtons = () => {
       </a>
 
       <a
-        href="https://wa.me/+919540457075" // removed space after +91
+        href="https://wa.me/+918178290067" // removed space after +91
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 flex items-center justify-center rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 transition duration-300"
