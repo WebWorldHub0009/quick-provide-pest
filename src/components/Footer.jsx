@@ -155,8 +155,7 @@ export default function Footer() {
           {/* Emails */}
           {[
             "Quickprovidepestcontrolservice@gmail.com",
-            
-           
+            "quickprovidepestcontrol@gmail.com"
           ].map((email, i) => (
             <p key={i} className="text-sm mb-2 flex items-center gap-2">
               <FaEnvelope className="text-blue-800" />

@@ -42,6 +42,7 @@ const Contact = () => {
             <div className="flex items-start gap-4 text-base mb-4">
               <AiOutlineMail className="mt-1 text-[#E30613] text-2xl" />
               <div>
+                Quickprovidepestcontrol@gmail.com 
                 quickprovidepestcontrol@gmail.com <br />
                 info@quickprovidepestcontrolservice.in
               </div>
